@@ -383,7 +383,7 @@ app.post('/friends/', async (req, res) => {
 })
 
 
-app.delete('/friends/:id', async (req, res) => {
+app.delete('/friends/', async (req, res) => {
   const { user, friend } = req.body
   
   try {
