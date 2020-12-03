@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../techblog/public"
+		},
+		{
+			"path": "../techblog/src"
+		},
+		{
+			"path": "../techblog/views"
+		}
+	]
+}

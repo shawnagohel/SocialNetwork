@@ -374,7 +374,7 @@ app.post('/friends/', async (req, res) => {
 
     // filter out the reaction we want to remove
     user1.friends.push( mongoose.Types.ObjectId(friend) )
-    await thought.save()
+    await user1.save()
     
   } catch (e) {
     console.log(e);
