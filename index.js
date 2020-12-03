@@ -410,13 +410,6 @@ app.delete('/friends/', async (req, res) => {
     } )
     await user1.save()
 
-
-
-    // // filter out the reaction we want to remove
-    // user1.friends.filter( f => {
-    //   return f != mongoose.Types.ObjectId(friend)
-    // } )
-    // await thought.save()
     
   } catch (e) {
     console.log(e);
