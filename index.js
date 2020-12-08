@@ -275,6 +275,7 @@ app.post('/reactions/', async (req, res) => {
 
   const { thoughtId, username, createdAt, reactionBody  } = req.body
 
+
   try {
     mongoose.connect(
       DB_URL,
@@ -302,6 +303,9 @@ app.post('/reactions/', async (req, res) => {
 
     // add the raction to the array of reactions
     thought.reactions.push(reaction)
+
+    console.log(thought)
+
     await thought.save()
     
   } catch (e) {
@@ -404,12 +408,12 @@ app.delete('/friends/', async (req, res) => {
     const user1 = await User.findOne({
       _id: mongoose.Types.ObjectId(user)
     })
+
     // filter out the reaction we want to remove
     user1.friends = user1.friends.filter( f => {
       return f != mongoose.Types.ObjectId(friend)
     } )
     await user1.save()
-
     
   } catch (e) {
     console.log(e);
